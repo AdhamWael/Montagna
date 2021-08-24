@@ -50,27 +50,22 @@
             <div class="col-4">
                 <div class="container">
                     <ul class="thumb">
-                        <li onmouseover="hha('/media/{{product.product_image1}}')">
-                        <img src="/media/{{product.product_image1}}"></li>
-                        <li onmouseover="hha('/media/{{product.product_image2}}')">
-                        <img src="/media/{{product.product_image2}}"></li>
-                        <li onmouseover="hha('/media/{{product.product_image3}}')"> 
-                        <img src="/media/{{product.product_image3}}"></li>
+                        <li>
+                        <img src="/media/{{product.product_image1}}">
+                        </li>
+                        <li>
+                        <img src="/media/{{product.product_image2}}">
+                        </li>
+                        <li> 
+                        <img src="/media/{{product.product_image3}}">
+                        </li>
                     </ul>
                     <div class="imgBox">
                         <h2>{{product.product_name}}</h2>
                         <img src="/media/{{product.product_image1}}" id="{{product.product_classes}}">
                         <a href="#" class="btn52">Add to Cart</a>
                     </div>
-                </div>
-            </div>
-               <script>
-                    function hha(anything) {
-                        var img_id = {{product.product_classes}}.id
-                        console.log(img_id)
-                        document.getElementById(img_id).src = anything;
-                    }
-                </script>
+                </div> 
         {% endfor %}
     </div>
 
@@ -147,14 +142,6 @@
                 </div>
             </div>
         </footer>
-
-    <script type="text/javascript">
-        $element.bind('mouseover', function() {
-            var id = $(this).attr('id');
-            console.log(id)
-        });
-    </script>        
-
 </body>
 
 </html>
